@@ -4,45 +4,58 @@
 
 
 # Driver code - don't touch anything below this line.
-puts "TESTING the Person class..."
-puts
 
-person = Person.new("Peter", "Jang")
+class Person 
+  def initialize(set_first_name, set_last_name)
+    @first_name = set_first_name
+    @last_name = set_last_name
+  end 
 
-result = person.first_name
+  def first_name
+    @first_name
+  end 
 
-puts "first_name returned:"
-puts result
-puts
+  def last_name
+    @last_name
+  end
 
-if result == "Peter"
-  puts "PASS!"
-else
-  puts "F"
-end
-puts
+  def full_name
+    full_name = first_name + " " + last_name
+  end 
+      
 
-result = person.last_name
+  puts "TESTING the Person class..."
+  puts
+  person = Person.new("Peter", "Jang")
+  result = person.first_name
+  puts "first_name returned:"
+  puts result
+  puts
+  if result == "Peter"
+    puts "PASS!"
+  else
+    puts "F"
+    end
+  puts
+  result = person.last_name
+  puts "last_name returned:"
+  puts result
+  puts
+  if result == "Jang"
+    puts "PASS!"
+  else
+    puts "F"
+  end
+  puts
+  result = person.full_name
+  puts "full_name returned:"
+  puts result
+  puts
+  if result == "Peter Jang"
+    puts "PASS!"
+  else
+    puts "F"
+  end
+end 
 
-puts "last_name returned:"
-puts result
-puts
 
-if result == "Jang"
-  puts "PASS!"
-else
-  puts "F"
-end
-puts
-
-result = person.full_name
-
-puts "full_name returned:"
-puts result
-puts
-
-if result == "Peter Jang"
-  puts "PASS!"
-else
-  puts "F"
-end

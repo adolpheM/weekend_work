@@ -4,45 +4,70 @@
 
 
 # Driver code - don't touch anything below this line.
-puts "TESTING the Rectange class..."
-puts
 
-rectangle = Rectangle.new(10, 30)
 
-result = rectangle.width
+class Rectangle
 
-puts "width returned:"
-puts result
-puts
+  def initialize(set_width, set_height)
+    @width = set_width
+    @height = set_height
+  end 
 
-if result == 10
-  puts "PASS!"
-else
-  puts "F"
-end
-puts
+  def width
+    @width
+  end 
 
-result = rectangle.height
+  def height
+    @height
+  end
 
-puts "height returned:"
-puts result
-puts
+  def area
+    area = width * height
+  end 
 
-if result == 30
-  puts "PASS!"
-else
-  puts "F"
-end
-puts
 
-result = rectangle.area
 
-puts "area returned:"
-puts result
-puts
 
-if result == 300
-  puts "PASS!"
-else
-  puts "F"
-end
+  puts "TESTING the Rectange class..."
+  puts
+
+  rectangle = Rectangle.new(10, 30)
+
+  result = rectangle.width
+
+  puts "width returned:"
+  puts result
+  puts
+
+  if result == 10
+    puts "PASS!"
+  else
+    puts "F"
+  end
+  puts
+
+  result = rectangle.height
+
+  puts "height returned:"
+  puts result
+  puts
+
+  if result == 30
+    puts "PASS!"
+  else
+    puts "F"
+  end
+  puts
+
+  result = rectangle.area
+
+  puts "area returned:"
+  puts result
+  puts
+
+  if result == 300
+    puts "PASS!"
+  else
+    puts "F"
+  end
+end 

@@ -3,6 +3,8 @@
 # comes with Ruby!
 
 def reverse_a_string(string)
+  string.chars.reduce { |x, y| y + x }
+
 
 end
 
@@ -21,3 +23,8 @@ if result == "edcba"
 else
   puts "F"
 end
+
+
+
+
+
